@@ -1,6 +1,10 @@
+@font-face {
+    font-family: Pixel font;
+    src: url(04B_30__.TTF);
+}
 body {
     background-color: rgb(231, 231, 231);
-
+    /* background: linear-gradient(to left, rgb(231, 231, 231), rgb(114, 114, 116)); */
 }
 .container-body {
     background-color: white;
@@ -8,34 +12,146 @@ body {
     /* border: solid 1px black; */
     height: auto;
     width: auto;
-    width: 512px;
-    height: 512px;
+    max-width: 512px;
+    max-height: 512px;
     position: fixed;
     left: 900px;
-    top: 160px;
+    top: 190px;
 }
 
-.container {
-    display: grid;
-    grid-template-columns: repeat(16, auto);;
-    width: 512px;
-    height: 512px;
-    border: dotted 0.1px rgb(187, 187, 187);
+#title {
+    position: fixed;
+    top: 60px;
+    left: 700px;
+    font-size: 50px;
+    font-family: Pixel font;
+
 
 }
 
-.divGrid {
-    width: 30px;
-    height: 30px;
+#colorPicker {
+    position: fixed;
+    top: 210px;
+    left: 637px;
+    width: 90px;
+    height: 90px;
+    border: none;
+    cursor: pointer;
+    background-color: transparent;
+}
+
+#colorPicker:hover {
+    transform: scale(1.07);
+}
+
+#colorPicker::-webkit-color-swatch {
+    border-radius: 50%;
+    border: none;
+}
+
+#colorPicker::-moz-color-swatch {
+    border-radius: 50%;
+    border: none;
+}
+
+.buttonContainer {
+    position: fixed;
+    top: 320px;
+    left: 600px;
+    height: 350px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
 }
 
 button {
-    position: fixed;
-    top: 300px;
-    left: 500px;
-    height: 50px;
+    height: 60px;
+    width: 160px;
     box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
-    border-radius: 20px;
+    border-radius: 10px;
+    border: solid 0.01px;
+    font-size: 13px;
+    font-family: Pixel font;
+    color: rgb(78, 77, 77);
+}
+
+button:hover {
+    transform: scale(1.05);
+    cursor: pointer;
 
 }
 
+button::-webkit-color-swatch {
+    border-radius: 15px;
+    border: none;
+}
+
+/* button:active {
+    background-color: red;
+    color: blue;
+} */
+
+.container {
+    display: grid; /* Changed to grid */
+    justify-content: center;
+    width: 512px;
+    height: 512px;
+}
+
+
+
+.inputContainer {
+    position: fixed;
+    top: 430px;
+    left: 510px;
+    width: 500;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    gap: 15px;
+}
+
+.footer-container {
+    color: white;
+    position: fixed;
+    top: 813px;
+    left: 750px;
+    font-size: 13px;
+    background-color: rgb(66, 78, 88);
+    padding: 20px 20px 20px 5px;
+    width: 350px;
+    display: flex;
+    justify-content: center;
+    font-family: Pixel font;
+
+}
+
+#copyright {
+    display: flex;
+    gap: 25px;
+}
+
+#gitImg {
+    width: 37px;
+    height: 37px;
+    position: fixed;
+    top: 820px;
+    left: 1070px;
+    transition: transform 0.2s ease;
+    
+}
+
+#gitImg:hover {
+    transform: scale(1.2) rotate(360deg);
+}
+
+#C {
+    font-size: 19px;
+    font-family: Arial, Helvetica, sans-serif;
+    position: fixed;
+    left: 896px;
+    top: 827.5px;
+    
+
+}

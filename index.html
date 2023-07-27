@@ -4,15 +4,32 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Etch-a-Sketch</title>
-    <script src="script.js" defer></script>
     <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-    <button>click to specify number of grids</button>
-    <div class="container-body">
-        <div class="container">
-
+    <div id="wholeBody">
+        <div id="title">Etch-a-Sketch</div>
+        <div class="buttonContainer">
+            <button id="clearBtn">Clear</button>
+            <button class="firstBtn Btn" onclick="assignValue(this)">16 X 16</button>
+            <button class="secondBtn Btn" onclick="assignValue(this)">32 X 32</button>
+            <button class="thirdBtn Btn" onclick="assignValue(this)">64 X 64</button>
         </div>
+        <div class="container-body">
+            <div class="container">
+
+
+            </div>
+        </div>
+        <input id="colorPicker" type="color" value="#333333"/>
+        <div class="footer-container">
+            <footer id="copyright">Copyright <div id="C">©</div> 2023 micha-77</footer>
+            <a href="https://github.com/Micha-77">
+            <img src="Github-logo.png" alt="Github-logo" id="gitImg"></a>
+        </div>
+
     </div>
+
+    <script src="script.js" defer></script>
 </body>
 </html>
